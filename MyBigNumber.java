@@ -9,8 +9,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- *
- * @author Hữu Phúc PD
+ * Tác giả:  Nguyễn Hữu Phúc.
+ * DesCription.
  */
 public class MyBigNumber {
 	
@@ -20,8 +20,20 @@ public class MyBigNumber {
      * Không giới hạn độ dài hai chuỗi.
      * 
      */
+	/**
+     * Để thực hiện phép cộng, ta cần 2 chuỗi làm tham số cho hàm sum trong đó:
+     * 2 chuỗi này đều chỉ chứa các kí số từ '0' đến '9'.
+     * <br/>
+     *
+     * @param num1 chuỗi số thứ nhất.
+     * @param num2 chuỗi số thứ hai.
+     * @return chuỗi có giá trị là tổng của hai số num1 và num2.
+     */
 	
     public String sum(String num1, String num2){
+	    
+	    	// Buoc 1: lay do dai 2 chuoi
+       		// Phan khai bao
 		
 		int max = (num1.length() < num2.length() ? num2.length():num1.length());// lay do dau lon nhat giua a va b
 		
@@ -50,6 +62,7 @@ public class MyBigNumber {
                 int nho = 0;// Khởi tạo số nhớ = 0 để khi cộng sẽ có vài trường hợp lớn hơn 9
                 String result = "";
 		int i = 0;
+	    	// Lặp từ 0 đến max lần
 		for( i = 0 ; i < max ; i++ ){
 			vitri1 = length1 - i - 1;// cập nhật lại vị trí chuỗi s1
                         vitri2 = length2 - i - 1;// cập nhật lại vị trí chuỗi s2
