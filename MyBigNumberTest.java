@@ -1,29 +1,23 @@
-import org.junit.Test;
-import static org.junit.Assert.*;
+import javaapplication1.MyBigNumber;
+import java.util.*;
 
+/**
+ *
+ * @author Phuc Nguyen
+ * This file is using for user to enter 2 string from keyboard and see the step by step of sum method
+ */
 
-public class MyBigNumberTest {
-
-    @Test
-    public void testSum() {
-        MyBigNumber a = new MyBigNumber();
-        String sum1 = a.sum("123", "123");
-        assertEquals("Correct", "246", sum1);
-    }
-
-    @Test
-    public void testSum2() {
-        MyBigNumber a = new MyBigNumber();
-        String sum2 = a.sum("123", "abc");
-        assertEquals("Correct", "Vui lòng không nhập chữ hoặc ký tự đặt biệt !", sum2);
-    }
-
-    @Test
-    public void testSum3() {
-        MyBigNumber a = new MyBigNumber();
-        String sum3 = a.sum("-123", "123");
-        assertEquals("Correct", "Phần mềm chưa hỗ trợ số âm !", sum3);
-    }
-
-    
+class  MyBigNumberTest{
+    public static void main(String[]args){	
+        MyBigNumber mb = new MyBigNumber();
+	Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Enter number 1: ");
+        String s1 = sc.nextLine();
+        
+        System.out.println("Enter number 2: ");
+	String s2 = sc.nextLine();
+	
+        System.out.println("Result: "+ mb.sum(s1,s2));
+	}
 }
